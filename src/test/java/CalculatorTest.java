@@ -35,6 +35,8 @@ class CalculatorTest {
 
     @Test
     void solver() {
-        assertEquals(45, calculator.solver());
+        assertEquals(7, calculator.solver(10, 5, 3));
+        assertEquals(28, calculator.solver(20, 10, 5));
+        assertEquals(8, calculator.solver(5, 5, 5));
     }
 }
