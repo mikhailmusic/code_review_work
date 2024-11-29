@@ -37,7 +37,6 @@ class CalculatorTest {
 
     @Test
     void solver() {
-
         assertEquals(7, calc.solver(10, 5, 3));
         assertEquals(28, calc.solver(20, 10, 5));
         assertEquals(8, calc.solver(5, 5, 5));
@@ -46,10 +45,10 @@ class CalculatorTest {
     @Test
     void solverLinerEquation() {
         // Тест на корректное решение уравнения
-        assertEquals(1, calc.solver(2, 2, 4), "Уравнение 2x + 2 = 4 должно иметь решение x = 1");
-        assertEquals(-3, calc.solver(1, 3, 0), "Уравнение x + 3 = 0 должно иметь решение x = -3");
+        assertEquals(1, calc.solverLinerEquation(2, 2, 4), "Уравнение 2x + 2 = 4 должно иметь решение x = 1");
+        assertEquals(-3, calc.solverLinerEquation(1, 3, 0), "Уравнение x + 3 = 0 должно иметь решение x = -3");
 
         // Тест на выброс исключения при a = 0
-        assertThrows(ArithmeticException.class, () -> calc.solver(0, 2, 4));
+        assertThrows(ArithmeticException.class, () -> calc.solverLinerEquation(0, 2, 4));
     }
 }
